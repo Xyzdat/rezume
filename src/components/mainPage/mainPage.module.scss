@@ -1,0 +1,158 @@
+$border: 3px solid var(--text-color);
+
+::-webkit-scrollbar {
+  width: 6px;
+}
+
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--text-color);
+  border-radius: 20px;
+
+}
+
+.section {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  box-sizing: border-box;
+}
+.container {
+  margin: 0;
+  color: var(--text-color);
+  height: calc(100vh - 70px);
+  width: 100%;
+  box-sizing: border-box;
+  // overflow: hidden;
+
+  display: flex;
+  flex-direction: column;
+  border-top: $border;
+
+  &__upperPart {
+    display: grid;
+    grid-template-columns: minmax(0, 1.4fr) minmax(0, 0.6fr);
+    min-height: 55vh;
+  }
+
+  &__title {
+    display: flex;
+    justify-content: end;
+    text-align: left;
+    padding: 20px;
+    box-sizing: border-box;
+    flex-direction: column;
+
+
+    border-right: $border;
+    border-bottom: $border;
+  }
+
+  &__titleJob {
+    margin-top: 20px;
+    text-align: left;
+    font-size: min(10vw, 50px);
+    font-weight: 600;
+    padding: 20px;
+    box-sizing: border-box;
+  }
+
+  &__titleMe {
+    text-align: left;
+    font-size: min(10vw, 160px);
+    font-weight: 600;
+    padding: 20px;
+    box-sizing: border-box;
+    margin-top: -60px;
+  }
+
+  &__imageTop {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    box-sizing: border-box;
+
+    
+    border-bottom: $border;
+  }
+
+  &__lowerPart {
+    display: grid;
+    grid-template-columns: minmax(0, 1.4fr) minmax(0, 0.6fr);
+  }
+
+   &__description {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: left;
+    font-size: 22px;
+    font-weight: 400;
+    padding: 20px;
+    box-sizing: border-box;
+    
+    border-right: $border;
+  }
+
+  &__imageBottom {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    box-sizing: border-box;
+  }
+}
+
+.experience {
+  border-top: $border;
+  display: flex;
+  flex-direction: column;
+  height: 200vh;
+  padding: 0px 40px 0px 40px;
+
+
+  &__title {
+    box-sizing: border-box;
+    font-size: 64px;
+    font-weight: 600;
+    
+    padding: 20px;
+    border-left: $border ;
+    border-right: $border ;
+  }
+
+  &__content_item {
+    display: grid;
+    grid-template-columns: minmax(0, 1.4fr) minmax(0, 0.6fr);
+    min-height: 50vh;
+    border: $border;
+  }
+
+  &__content_item_about {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    padding: 20px;
+    color: var(--text-color);
+    font-size: 18px;
+    border-right: $border;
+  }
+
+  &__content_item_title{
+    font-size: 24px;
+    font-weight: 600;
+  }
+
+  &__content_item_company {
+    font-size: 28px;
+    font-weight: 600;
+  }
+
+  &__content_item_description{
+    font-size: 20px;
+    font-weight: 500;
+  }
+}
+
